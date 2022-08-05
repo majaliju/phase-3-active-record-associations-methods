@@ -10,7 +10,9 @@ class Genre < ActiveRecord::Base
     self.artists.count
   end
 
+  # found this one via https://www.brianstorti.com/understanding-ruby-idiom-map-with-symbol/
+  # have to review this one more; dont fully understand it
   def all_artist_names
-    self.name
+    self.artists.map(&:name)
   end
 end
