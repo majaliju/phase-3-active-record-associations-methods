@@ -16,6 +16,7 @@ class Song < ActiveRecord::Base
     # then update to make Drake the artist for the song
     # how to do the above -- I have no clue on 
     Artist.find_or_create_by(name: "Drake")
+    self.update(name: "Drake")
 
   end
 end
